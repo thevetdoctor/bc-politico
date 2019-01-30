@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=0">
 	<title>Politico</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
@@ -12,25 +13,25 @@
 			<h1>Politico </h1><span><h3>... enhancing credible elections!</h3></span>
 		<div class="navbar">
             <div class="nav"><a href="./index.html">Home</a></div>
-            <div class="nav">Political parties</div>
-			<div class="nav">Profile</div>
+            <div class="nav"><a>Political parties</a></div>
+			<div class="nav"><a>Profile</a></div>
 		</div>
 		<div class="row">
 			<div id="landing">
-				<div id="signout" class="nav"><a href="#">Sign Out</a></div>
+				<!-- <div id="signout" class="nav"><a href="#">Sign Out</a></div> -->
             </div>
-				<div id="display"></div>
+			<div id="display"></div>
 
 			<div id="signInForm">
 				<form action="">
 						<div id="error"></div>
 					<div>
-						<label for="email">Email</label>
-						<input id="signInEmail" type="text" name="email" placeholder="email" required="">
+						<label for="email">Email</label><br>
+						<input id="signInEmail" type="text" name="email" placeholder="Enter email" required="">
 					</div>
 					<div>
-						<label for="password">Password</label>
-						<input id="signInPassword" type="password" name="password" placeholder="password" required="">
+						<label for="password">Password</label><br>
+						<input id="signInPassword" type="password" name="password" placeholder="Enter password" required="">
 					</div>
 					<div>
 						<input id="signInBtn" type="submit" name="signIn" value="Sign In">

@@ -8,10 +8,11 @@ body {
 	padding: 0;
 	width: 70%;
 	height: 100%;
-	font-size: 3.5em;
+	font-size: 4em;
 	text-align: center;
 	color: #000;
-    font-family: monospace;
+    /* font-family: monospace; */
+    font-family: 'Raleway', sans-serif;
     line-height: 1.1;
 }
 
@@ -31,7 +32,8 @@ span {
 
 .row {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    padding: 15px;
 }
 
 a {
@@ -57,7 +59,7 @@ a {
 #form {
 	 font-size: 0.7em;
 	 display: flex;
-	 margin: 5px;
+	 margin: 25px;
 	 align-content: center;
 }
 
@@ -81,10 +83,15 @@ input {
 }
 
 .container img {
-	/* padding-top: 10px; */
+    display: block;
+	padding-top: 10px;
     border-radius: 10px;
     width: 30%;
     margin: 0;
+}
+
+.content {
+    text-align: left;
 }
 
 #landing {
@@ -97,18 +104,19 @@ input {
 }
 
 #signInForm {
-	display: flex;
+    display: flex;
+    align-self: center;
 	justify-content: center;
 }
 
 
- @media screen and (min-width: 415px) {
+ @media only screen and (min-width: 415px) {
 	body {
 		font-size: 1.5em;
         /* display: flex; */
         /* flex: column nowrap; */
-		/*width: 100%;
-		height: 100vh;*/
+		 width: 100%;
+		height: 100vh; 
 	}
 
 	.container {
@@ -117,10 +125,23 @@ input {
 	}
 
 	.nav {
-		padding: 5px;
+		padding: 5px 15px;
 	}
 
 	.navbar, .row {
 		width: 100%;
-	}
+    }
+    
+    #landing {
+        padding: 5px;
+        margin: 15px;
+    }
+
+    /* header {
+        display: flex;
+    } */
+
+    .container img {
+        display: none;
+    }
 } 
