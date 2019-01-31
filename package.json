@@ -1,0 +1,29 @@
+{
+  "name": "politico",
+  "version": "1.0.0",
+  "description": "A web app to enhance credible elections",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thevetdoctor/bc-politico.git"
+  },
+  "keywords": [
+    "election",
+    "politics",
+    "candidates",
+    "parties",
+    "campaign"
+  ],
+  "author": "animalworldng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thevetdoctor/bc-politico/issues"
+  },
+  "homepage": "https://github.com/thevetdoctor/bc-politico#readme",
+  "dependencies": {
+    "chai": "^4.2.0"
+  }
+}
