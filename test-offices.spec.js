@@ -1,7 +1,7 @@
 // test-parties.spec.js
 
 
-const   offices = require('./api/models/offices'),
+const   offices = require('./api/controllers/offices'),
         expect  = require('chai').expect;
 
 

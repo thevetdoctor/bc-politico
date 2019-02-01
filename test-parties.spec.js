@@ -2,7 +2,7 @@
 
 
 const   app   = require('./js/app'),
-      parties = require('./api/models/parties'),
+      parties = require('./api/controllers/parties'),
       expect  = require('chai').expect;
 
 
