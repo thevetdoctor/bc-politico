@@ -30,6 +30,26 @@ module.exports = {
                 message: 'Please fill in party details'
             });
         }
+    },
+
+    getAllParties : (req, res) => {
+
+            if(partyRecord.length > 0) {
+            
+            let partyArray = [];
+            let parties = partyRecord.forEach((party) => {
+                partyArray.push({id: party.id, name: party.name, logoUrl: party.logoUrl })
+            });
+            res.status(200).json({
+                status: 200,
+                 data : partyArray
+            });
+        } else {
+            res.status(404).json({
+                status: 400,
+                error: 'No record found'
+            })
+        }
     }
 
 }
