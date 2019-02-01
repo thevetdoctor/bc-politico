@@ -17,5 +17,7 @@ router.post('/', partiesController.createParty);
 
 router.get('/', partiesController.getAllParties);
 
+router.get('/:id', partiesController.getParty);
+
 
 module.exports = router;

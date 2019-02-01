@@ -27,7 +27,7 @@ module.exports = {
             });
         } else {
             res.status(404).json({
-                message: 'Please fill in party details'
+                error: 'Please fill in party details'
             });
         }
     },
@@ -49,6 +49,30 @@ module.exports = {
                 status: 400,
                 error: 'No record found'
             })
+        }
+    },
+
+    getParty : (req, res) => {
+        const id = req.params.id;
+        const partyId = parseInt(id, 10);
+
+        if(partyRecord.length > 0) {
+
+            let findParty = (party) => {
+                return party.id === partyId;
+            }
+
+            let oneParty = partyRecord.find(findParty);
+
+            res.status(200).json({
+                status: 200,
+                 data : [oneParty]
+            });
+        } else {
+            res.status(404).json({
+                status: 400,
+                error: 'No record found'
+            });
         }
     }
 
