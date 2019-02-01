@@ -19,5 +19,7 @@ router.get('/', partiesController.getAllParties);
 
 router.get('/:id', partiesController.getParty);
 
+router.patch('/:id', partiesController.changePartyName);
+
 
 module.exports = router;

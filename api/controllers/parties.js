@@ -74,6 +74,35 @@ module.exports = {
                 error: 'No record found'
             });
         }
+    },
+
+
+    changePartyName : (req, res) => {
+
+        const id = req.params.id;
+        const partyId = parseInt(id, 10);
+
+        if(partyRecord.length > 0) {
+
+            let findParty = (party) => {
+                return party.id === partyId;
+            }
+
+            let oneParty = partyRecord.find(findParty);
+                oneParty.name = req.body.name;
+
+            res.status(200).json({
+                status: 200,
+                 data : [{id: oneParty.id,
+                        name: oneParty.name}]
+            });
+        } else {
+            res.status(404).json({
+                status: 400,
+                error: 'No record found'
+            });
+        }
     }
+
 
 }
