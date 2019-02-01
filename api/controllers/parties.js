@@ -102,6 +102,34 @@ module.exports = {
                 error: 'No record found'
             });
         }
+    },
+
+
+
+    deleteParty : (req, res) => {
+        const id = req.params.id;
+        const partyId = parseInt(id, 10);
+
+        if(partyRecord.length > 0) {
+
+            let findParty = (party) => {
+                return party.id === partyId;
+            }
+
+            let oneParty = partyRecord.find(findParty);
+
+            partyRecord.splice(oneParty.id - 1, 1);
+
+            res.status(200).json({
+                status: 200,
+                 message : 'Party record deleted'
+            });
+        } else {
+            res.status(404).json({
+                status: 400,
+                error: 'No record found'
+            });
+        }
     }
 
 

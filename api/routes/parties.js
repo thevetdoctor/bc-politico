@@ -21,5 +21,7 @@ router.get('/:id', partiesController.getParty);
 
 router.patch('/:id', partiesController.changePartyName);
 
+router.delete('/:id', partiesController.deleteParty);
+
 
 module.exports = router;
