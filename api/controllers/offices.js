@@ -30,5 +30,25 @@ module.exports = {
                     error: 'Please fill in office details'
                 })
             }
+    },
+
+
+    getAllOffices : (req, res) => {
+                if(officeRecord.length > 0) {
+            
+            let officeArray = officeRecord.map((office) => {
+                return {id: office.id, type: office.type, name: office.name}
+            })
+
+            res.status(200).json({
+                status: 200,
+                 data : officeArray
+            });
+        } else {
+            res.status(404).json({
+                status: 400,
+                error: 'No record found'
+            })
+        }
     }
 }
