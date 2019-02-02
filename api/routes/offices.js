@@ -9,7 +9,9 @@ const officesController = require('../controllers/offices');
 
 router.post('/', officesController.createOffice);
 
-router.get('/', officesController.getAllOffices)
+router.get('/', officesController.getAllOffices);
+
+router.get('/:id', officesController.getOffice);
 
 
 

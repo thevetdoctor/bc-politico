@@ -50,5 +50,30 @@ module.exports = {
                 error: 'No record found'
             })
         }
+    },
+
+    getOffice : (req, res) => {
+
+        const id = req.params.id;
+        const officeId = parseInt(id, 10);
+
+        if(officeRecord.length > 0) {
+
+            let findOffice = (office) => {
+                return office.id === officeId;
+            }
+
+            let oneOffice = officeRecord.find(findOffice);
+
+            res.status(200).json({
+                status: 200,
+                 data : [oneOffice]
+            });
+        } else {
+            res.status(404).json({
+                status: 400,
+                error: 'No record found'
+            });
+        }
     }
 }

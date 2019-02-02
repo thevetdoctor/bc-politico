@@ -35,9 +35,8 @@ module.exports = {
 
             if(partyRecord.length > 0) {
             
-            let partyArray = [];
-            let parties = partyRecord.forEach((party) => {
-                partyArray.push({id: party.id, name: party.name, logoUrl: party.logoUrl })
+            let partyArray = partyRecord.map((party) => {
+                return {id: party.id, name: party.name, logoUrl: party.logoUrl };
             });
             res.status(200).json({
                 status: 200,
