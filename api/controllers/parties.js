@@ -6,15 +6,14 @@ module.exports = {
 
     createParty : (req, res) => {
 
-        const party = {   
-                        id : partyRecord.length,
+        const party = {  id : partyRecord.length,
                         name: req.body.name,
-                    hqAddress: req.body.hqAddress,  
-                    logoUrl: req.body.logoUrl
+                   hqAddress: req.body.hqAddress,  
+                     logoUrl: req.body.logoUrl
                     }     
              
+            // if(partyRecord)
             if(party) {
-
                 party.id = partyRecord.length + 1;
                 partyRecord.push(party);
 

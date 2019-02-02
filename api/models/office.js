@@ -1,10 +1,46 @@
-// api/models/Office.js
+// api/models/office.js
 
-const office = {
-    id: new Number,
-    type: '',
-    name: ''
-}
+const officeRecord = [
+    {id : 1,
+    type: 'state',
+    name: 'Governor',
+    },
+    {id : 2,
+   type : 'state',
+   name : 'Deputy Governor',
+    },
+    { id: 3,
+    type: 'state',
+    name: 'State House of Assembly',
+    },
+    { id: 4,
+    type: 'federal',
+    name: 'President',
+    },
+    { id: 5,
+    type: 'federal',
+    name: 'Vice President',
+    },
+    { id: 6,
+    type: 'legislative',
+    name: 'Senate',
+    },
+    { id: 7,
+    type: 'legislative',
+    name: 'House of Representatives',
+    },
+    { id: 8,
+    type: 'local government',
+    name: 'Chairman',
+    },
+    { id: 9,
+    type: 'local government',
+    name: 'Deputy Chairman',
+    },
+    { id: 10,
+    type: 'local government',
+    name: 'Councillor',
+    }
+];
 
-
-module.exports = office;
+module.exports = officeRecord;
