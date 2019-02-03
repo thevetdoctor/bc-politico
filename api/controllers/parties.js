@@ -12,7 +12,6 @@ module.exports = {
                      logoUrl: req.body.logoUrl
                     }     
              
-            // if(partyRecord)
             if(party) {
                 party.id = partyRecord.length + 1;
                 partyRecord.push(party);

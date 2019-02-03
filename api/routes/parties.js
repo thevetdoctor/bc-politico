@@ -1,3 +1,6 @@
+/* eslint-disable import/newline-after-import */
+/* eslint-disable eol-last */
+/* eslint-disable linebreak-style */
 // api/routes/parties.js
 
 const express = require('express');
