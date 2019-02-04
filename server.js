@@ -23,7 +23,8 @@ app.use('/api/v1/offices', offices);
 
 
 app.get('/', (req, res) => {
-    res.end(`<h1>Welcome to Politico</h1> ... your partner for credible elections`);
+    // res.end(`<h1>Welcome to Politico</h1> ... your partner for credible elections`);
+    res.send('/ui/index.html');
 })
 
 
