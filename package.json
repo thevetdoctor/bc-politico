@@ -4,7 +4,7 @@
   "description": "A web app to enhance credible elections",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha test",
     "start": "node server"
   },
   "repository": {
