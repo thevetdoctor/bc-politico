@@ -30,6 +30,9 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
-    "chai-http": "^4.2.1"
+    "chai-http": "^4.2.1",
+    "coveralls": "^3.0.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0"
   }
 }
