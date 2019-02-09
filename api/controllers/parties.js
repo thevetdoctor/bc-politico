@@ -1,3 +1,4 @@
+/*eslint-disable*/
 // api/controllers/parties
 
 const partyRecord = require('../models/party');

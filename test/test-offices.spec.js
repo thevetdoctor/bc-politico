@@ -1,24 +1,27 @@
 // test-parties.spec.js
 
 
-const chai = require('chai'),
-	  should = chai.should(),
-      expect  = require('chai').expect,
-      chaiHttp = require('chai-http'),
-      server = require('../server'),
-      offices = require('../api/controllers/offices');
+const chai = require('chai');
+const should = chai.should();
+const expect  = require('chai').expect;
+const chaiHttp = require('chai-http');
+const server = require('../server');
+const offices = require('../api/controllers/offices');
 
 
 
-      describe('Political offices', () => {
+      describe('Political Offices', () => {
 
           it('should exist', () => {
-             expect(offices).to.not.be.undefined;
+             offices.should.exist;
 
           });
+      });
 
 
-          describe('Create a political office', () => {
+      describe('Office Routes', () => {
+
+          describe('Create a new political office', () => {
 
 	          it('POST /api/v1/offices', (done) => {
 
@@ -50,7 +53,7 @@ const chai = require('chai'),
           describe('Return all registered political offices', () => {
 
 
-          		it('should return an array of all political offices', (done) => {
+          		it('GET /api/v1/offices', (done) => {
 
 
           				chai.request(server)
@@ -78,11 +81,11 @@ const chai = require('chai'),
           describe('Return a specific political office by ID', () => {
 
 
-             it('should return a specific political office', (done) => {
+             it('GET /api/v1/offices/:id', (done) => {
 
 
                  		chai.request(server)
-                 			.get('/api/v1/offices')
+                 			.get('/api/v1/offices/1')
                  			.end((err, res) => {
                  				res.should.have.status(200);
                  				res.should.be.json;

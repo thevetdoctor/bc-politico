@@ -12,10 +12,10 @@ const server = require('../server');
 chai.use(chaiHttp);
 
 
-      describe('Politico API endpoints', () => {
+      describe('Political Parties', () => {
 
         it('should exist', () => {
-             expect(parties).to.not.be.undefined;
+             parties.should.exist;
           });
 
       });
@@ -24,10 +24,10 @@ chai.use(chaiHttp);
       describe('Party Routes', () => {
 
 
-        describe('Create a new party', () => {
+        describe('Create a new political party', () => {
 
 
-            it('POST, should take inputs of name, hqAddress and logoUrl and create a political party', (done) => {
+            it('POST /api/v1/parties', (done) => {
 
                         chai.request(server)
                             .post('/api/v1/parties')
@@ -55,7 +55,7 @@ chai.use(chaiHttp);
 
         describe('Return all registered parties', () => {
 
-            it('GET, return a list of all political parties', (done) => {
+            it('GET /api/v1/parties', (done) => {
 
                     chai.request(server)
                         .get('/api/v1/parties')
@@ -77,10 +77,10 @@ chai.use(chaiHttp);
 
 
 
-        describe('Return a specific political party', () => {
+        describe('Return a specific political party by ID', () => {
 
 
-            it('should fetch a specific political party record by :id', (done) => {
+            it('GET /api/v1/parties/:id', (done) => {
 
                     chai.request(server)
                         .get('/api/v1/parties/1')
@@ -103,9 +103,9 @@ chai.use(chaiHttp);
 
 
 
-        describe('Change the name of a specific political party', () => {
+        describe('Change the name of a specific political party by ID', () => {
 
-            it('should edit the name of a specific political party', (done) => {
+            it('PATCH /api/v1/parties/:id', (done) => {
 
                     chai.request(server)
                         .patch('/api/v1/parties/1')
@@ -148,9 +148,9 @@ chai.use(chaiHttp);
         });
 
 
-        describe('Delete a specific political party', () => {
+        describe('Delete a specific political party by ID', () => {
 
-            it('should delete a specific political party', (done) => {
+            it('DELETE /api/v1/parties/:id', (done) => {
 
                         chai.request(server)
                             .delete('/api/v1/parties/1')

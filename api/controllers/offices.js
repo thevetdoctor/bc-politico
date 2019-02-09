@@ -1,3 +1,4 @@
+/*eslint-disable*/
 // api/controllers/offices
 
 const officeRecord = require('../models/office');
@@ -6,12 +7,12 @@ const officeRecord = require('../models/office');
 module.exports = {
 
     createOffice : (req, res) => {
-
+        
         let office =  { id : officeRecord.length,
                       type : req.body.type,
                       name : req.body.name
                     };
-
+            
             if(office) {
                 office.id = officeRecord.length + 1;
                 officeRecord.push(office);
@@ -35,7 +36,7 @@ module.exports = {
 
     getAllOffices : (req, res) => {
                 if(officeRecord.length > 0) {
-
+            
             let officeArray = officeRecord.map((office) => {
                 return {id: office.id, type: office.type, name: office.name}
             })
@@ -51,7 +52,6 @@ module.exports = {
             })
         }
     },
-
 
     getOffice : (req, res) => {
 
