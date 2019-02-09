@@ -1,3 +1,4 @@
+/*eslint-disable*/
 // api/controllers/offices
 
 const officeRecord = require('../models/office');

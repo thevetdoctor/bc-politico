@@ -1,3 +1,4 @@
+/*eslint-disable*/
 // api/controllers/parties
 
 const partyRecord = require('../models/party');
@@ -8,10 +9,10 @@ module.exports = {
 
         const party = {  id : partyRecord.length,
                         name: req.body.name,
-                   hqAddress: req.body.hqAddress,  
+                   hqAddress: req.body.hqAddress,
                      logoUrl: req.body.logoUrl
-                    }     
-             
+                    }
+
             if(party) {
                 party.id = partyRecord.length + 1;
                 partyRecord.push(party);
@@ -33,7 +34,7 @@ module.exports = {
     getAllParties : (req, res) => {
 
             if(partyRecord.length > 0) {
-            
+
             let partyArray = partyRecord.map((party) => {
                 return {id: party.id, name: party.name, logoUrl: party.logoUrl };
             });
@@ -94,7 +95,7 @@ module.exports = {
                         name: oneParty.name}]
             });
         } else {
-            res.status(404).json({
+            res.status(400).json({
                 status: 400,
                 error: 'No record found'
             });
